@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5C1672E-A8E3-44C7-84F4-481A22705EE4}</ProjectGuid>
+    <ProjectGuid>{FB38F395-A2F5-40DF-9407-577570D1E938}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Capitulo02.Tabuada</RootNamespace>
     <AssemblyName>Capitulo02.Tabuada</AssemblyName>

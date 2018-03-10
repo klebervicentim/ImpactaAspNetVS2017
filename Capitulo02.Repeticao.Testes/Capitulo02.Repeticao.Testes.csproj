@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{978A46FC-719C-4FBC-9B3E-A41768EAA810}</ProjectGuid>
+    <ProjectGuid>{1EBED5AC-4B56-42CA-B0F5-D9A73DFA9C64}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Capitulo02.Repeticao.Testes</RootNamespace>

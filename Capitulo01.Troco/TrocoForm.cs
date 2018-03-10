@@ -17,65 +17,44 @@ namespace Capitulo01.Troco
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void valorPagoTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void calcularButton_Click(object sender, EventArgs e)
         {
             decimal valorCompra = Convert.ToDecimal(valorCompraTextBox.Text);
-            decimal valorPago = Convert.ToDecimal(valorPagoTextBox.Text);
-            decimal troco = valorPago - valorCompra;
+            decimal valorPago= Convert.ToDecimal(valorPagoTextBox.Text);
 
-
-            //Isso é coisa minha
-            if (troco<=0)
-            {
-                naoHaTrocoLabel.Text = "NÃO HÁ TROCO";
-                naoHaTrocoLabel.Visible = true;
-            }
+            decimal troco = valorPago - valorCompra ;
 
             trocoTextBox.Text = troco.ToString("c");
 
             //ToDo: refatorar para usar estrutura de repetição
 
-            int moedas100 = 0, moedas50 = 0, moedas25 = 0, moedas10 = 0, moedas5 = 0, moedas1 = 0;
-
-            moedas100 = (int)troco;
+            var moedas1 = (int)troco;
+            //troco = troco % 1;
             troco %= 1;
 
-            moedas50 = (int)(troco/0.5m);
+            var moedas050 = (int)(troco / 0.5m);
             troco %= 0.5m;
 
-            moedas25 = (int)(troco / 0.25m);
+            var moedas025 = (int)(troco / 0.25m);
             troco %= 0.25m;
 
-            moedas10 = (int)(troco / 0.1m);
+            var moedas010 = (int)(troco / 0.1m);
             troco %= 0.1m;
 
-            moedas5 = (int)(troco / 0.05m);
+            var moedas005 = (int)(troco / 0.05m);
             troco %= 0.05m;
 
-            moedas1 = (int)(troco / 0.01m);
+            var moedas001 = (int)(troco / 0.01m);
             troco %= 0.01m;
 
-            moedasListView.Items[0].Text = Convert.ToString(moedas100);
-            moedasListView.Items[1].Text = Convert.ToString(moedas50);
-            moedasListView.Items[2].Text = Convert.ToString(moedas25);
-            moedasListView.Items[3].Text = Convert.ToString(moedas10);
-            moedasListView.Items[4].Text = Convert.ToString(moedas5);
-            moedasListView.Items[5].Text = Convert.ToString(moedas1);
+            //var moedas001 = (int)troco;
+
+            moedasListView.Items[0].Text = moedas1.ToString();
+            moedasListView.Items[1].Text = moedas050.ToString();
+            moedasListView.Items[2].Text = moedas025.ToString();
+            moedasListView.Items[3].Text = moedas010.ToString();
+            moedasListView.Items[4].Text = moedas005.ToString();
+            moedasListView.Items[5].Text = moedas001.ToString();
         }
     }
 }

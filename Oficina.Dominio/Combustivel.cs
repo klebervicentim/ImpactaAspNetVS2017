@@ -1,6 +1,6 @@
 ﻿namespace Oficina.Dominio
 {
-    public enum Combustivel
+    public enum Combustivel //: int
     {
         Gasolina = 1,
         Alcool = 2,

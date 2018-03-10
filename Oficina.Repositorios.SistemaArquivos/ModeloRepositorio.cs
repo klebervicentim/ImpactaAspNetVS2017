@@ -1,35 +1,58 @@
 using Oficina.Dominio;
 using Oficina.Repositorios.SistemaArquivos;
-using System.Xml.Linq;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using System.Xml.Linq;
 using System.Configuration;
 
 
-public class ModeloRepositorio
+namespace Oficina.Repositorios.SistemaArquivos
 {
-
-    public List <Modelo> SelecionarPorMarca(int marcaId)
+    public class ModeloRepositorio
     {
-        var modelos = new List<Modelo>();
-        var arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
 
-        foreach (var elemento in arquivoXml.Descendants("modelo"))
+        XDocument _arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+
+        public List<Modelo> SelecionarPorMarca(int marcaId)
         {
-            if (marcaId.ToString() == elemento.Element("marcaId").Value)
+            var modelos = new List<Modelo>();
+
+            foreach (var elemento in _arquivoXml.Descendants("modelo"))
             {
-                Modelo modelo = new Modelo();
+                if (marcaId.ToString() == elemento.Element("marcaId").Value)
+                {
+                    var modelo = new Modelo();
+                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
+                    modelo.Nome = elemento.Element("nome").Value;
+                    modelo.Marca = new MarcaRepositorio().Selecionar(marcaId);
 
-                modelo.Id =   Convert.ToInt32(elemento.Element("id").Value);
-                modelo.Nome = Convert.ToInt32(elemento.Element("nome").Value);
-                modelo.Marca = new MarcaRepositorio().Selecionar(marcaId);
-
-                modelos.Add(modelo);
+                    modelos.Add(modelo);
+                }
             }
-            
+
+            return modelos;
         }
 
-        return modelos;
-    }
+        public Modelo SelecionarPorId (int modeloId)
+        {
+            Modelo modelo = null;
 
+            foreach (var elemento in _arquivoXml.Descendants("modelo"))
+            {
+                if (modeloId.ToString() == elemento.Element("id").Value)
+                {
+                    modelo = new Modelo();
+                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
+                    modelo.Nome = elemento.Element("nome").Value;
+                    modelo.Marca = new MarcaRepositorio()
+                        .Selecionar(Convert.ToInt32(elemento.Element("marcaId").Value));
+
+                    break;
+                }
+            }
+
+            return modelo;
+        }
+
+    }
 }

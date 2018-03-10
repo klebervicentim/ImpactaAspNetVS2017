@@ -13,9 +13,10 @@ namespace Capitulo02.Repeticao.Testes
             {
                 for (int j = 1; j <= 10; j++)
                 {
-                    Console.WriteLine("{0} x {1} = {2}", i, j, i * j);
+                    Console.WriteLine($"{i} * {j} = {i * j}");
                 }
-                Console.WriteLine(new string('-',50));
+
+                Console.WriteLine(new string('-', 50));
             }
         }
 
@@ -23,10 +24,18 @@ namespace Capitulo02.Repeticao.Testes
         public void EstruturaForTeste()
         {
             int i = 1;
-            for (Console.WriteLine("iniciou"); i < 10; Console.WriteLine(i))
+
+            for (Console.WriteLine("Iniciou"); i <= 3; Console.WriteLine(i))
             {
                 i++;
             }
+
+            /*
+             for(inicialização; críterio de execução; pós-execução)
+             {
+                execução;
+            }
+            */
         }
 
         [TestMethod]
@@ -34,36 +43,37 @@ namespace Capitulo02.Repeticao.Testes
         {
             var i = 1;
 
-            for (;  i <= 3;)
+            for (; i <=3; )
             {
-                Console.WriteLine("{0}",i);
-                i++;
+                Console.WriteLine(i++);
             }
         }
 
         [TestMethod]
-        public void ContinueTest()
+        public void ContinueTeste()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                if (i<=5)
+                if (i <= 5)
                 {
                     continue;
                 }
-                Console.WriteLine("{0}",i);
+
+                Console.WriteLine(i);
             }
         }
 
         [TestMethod]
         public void BreakTeste()
         {
-            for (int i = 0; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 if (i > 5)
                 {
                     break;
                 }
-                Console.WriteLine("{0}", i);
+
+                Console.WriteLine(i);
             }
         }
 
@@ -71,9 +81,10 @@ namespace Capitulo02.Repeticao.Testes
         public void WhileTeste()
         {
             var i = 1;
-            while (i <=10)
+
+            while (i <= 10)
             {
-                Console.WriteLine("{0}",i++);
+                Console.WriteLine(i++);
             }
         }
 
@@ -82,8 +93,8 @@ namespace Capitulo02.Repeticao.Testes
         {
             do
             {
-                Console.WriteLine("Entrou");
-            } while (1==2);
+                Console.WriteLine("Entrou!");
+            } while (1 == 2);
         }
     }
 }

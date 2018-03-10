@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<veiculos>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>1</Id>
+    <Placa>BPA5911</Placa>
+    <Ano>2014</Ano>
+    <Observacao>Nenhuma Observacao</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>2</Id>
+    <Placa>MRV0400</Placa>
+    <Ano>2017</Ano>
+    <Observacao>Segundo carro</Observacao>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Amarelo</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
+</veiculos>

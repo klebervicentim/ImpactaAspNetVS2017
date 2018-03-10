@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C62A969A-CBE3-48EC-9C72-79E1E3807CF8}</ProjectGuid>
+    <ProjectGuid>{8177E0EB-630F-4CB8-A675-E079ECD77BC7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Capitulo01.Variaveis</RootNamespace>
     <AssemblyName>Capitulo01.Variaveis</AssemblyName>

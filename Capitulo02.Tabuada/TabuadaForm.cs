@@ -20,9 +20,9 @@ namespace Capitulo02.Tabuada
         private void tabuadaTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             //if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '\b' || e.KeyChar == '\r')
-            if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '\b' || e.KeyChar == '\r')
+            if (e.KeyChar >= 48 && e.KeyChar <= 57 || e.KeyChar == 8 || e.KeyChar == 13)
             {
-                if (e.KeyChar == '\r' && tabuadaTextBox.Text != string.Empty)
+                if (e.KeyChar == 13 && tabuadaTextBox.Text != string.Empty)
                 {
                     Calcular();
                 }
@@ -35,11 +35,14 @@ namespace Capitulo02.Tabuada
 
         private void Calcular()
         {
-            var numero = Convert.ToInt32(tabuadaTextBox.Text);
-            for (int i = 1; i <= 10; i++)
+            var tabuada = Convert.ToInt32(tabuadaTextBox.Text);
+            //var tabuadas = int.Parse(tabuadaTextBox.Text);
+
+            for (int i = 0; i <= 10; i++)
             {
-                tabuadaListBox.Items.Add($"{numero} x  {i} = {numero*i}");
+                tabuadaListBox.Items.Add($"{tabuada} * {i} = {tabuada * i}");
             }
+
             tabuadaTextBox.Focus();
             tabuadaTextBox.SelectAll();
         }

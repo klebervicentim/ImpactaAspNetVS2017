@@ -16,7 +16,7 @@ namespace Capitulo02.Fretes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fretesForm());
+            Application.Run(new FretesForm());
         }
     }
 }

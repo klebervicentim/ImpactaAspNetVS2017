@@ -34,8 +34,10 @@
             // 
             // tabuadaTextBox
             // 
-            this.tabuadaTextBox.Location = new System.Drawing.Point(12, 7);
-            this.tabuadaTextBox.MaxLength = 9;
+            this.tabuadaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabuadaTextBox.Location = new System.Drawing.Point(12, 12);
+            this.tabuadaTextBox.MaxLength = 4;
             this.tabuadaTextBox.Name = "tabuadaTextBox";
             this.tabuadaTextBox.Size = new System.Drawing.Size(268, 20);
             this.tabuadaTextBox.TabIndex = 0;
@@ -43,10 +45,13 @@
             // 
             // tabuadaListBox
             // 
+            this.tabuadaListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabuadaListBox.FormattingEnabled = true;
-            this.tabuadaListBox.Location = new System.Drawing.Point(12, 34);
+            this.tabuadaListBox.Location = new System.Drawing.Point(12, 38);
             this.tabuadaListBox.Name = "tabuadaListBox";
-            this.tabuadaListBox.Size = new System.Drawing.Size(267, 225);
+            this.tabuadaListBox.Size = new System.Drawing.Size(268, 225);
             this.tabuadaListBox.TabIndex = 1;
             // 
             // TabuadaForm

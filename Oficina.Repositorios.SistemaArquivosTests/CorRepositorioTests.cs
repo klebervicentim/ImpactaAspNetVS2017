@@ -15,11 +15,12 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         public void SelecionarTest()
         {
             var corRepositorio = new CorRepositorio();
+
             var cores = corRepositorio.Selecionar();
 
             foreach (var cor in cores)
             {
-                Console.WriteLine($"{cor.Id}{cor.Nome}");
+                Console.WriteLine($"{cor.Id} - {cor.Nome}");
             }
         }
     }
