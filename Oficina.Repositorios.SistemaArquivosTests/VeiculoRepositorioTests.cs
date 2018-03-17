@@ -19,17 +19,22 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void InserirTest()
         {
-            Veiculo veiculo = new Veiculo();
+            VeiculoPasseio veiculo = new VeiculoPasseio();
             veiculo.Ano = 2017;
             veiculo.Cambio = Cambio.Manual;
             veiculo.Combustivel = Combustivel.Gasolina;
             veiculo.Cor = new CorRepositorio().Selecionar(2);
-            veiculo.Id = 2;
+            //veiculo.Id = 2;
             veiculo.Modelo = new ModeloRepositorio().SelecionarPorId(1);
             veiculo.Placa = "MRV0400";
             veiculo.Observacao = "Segundo carro";
+            veiculo.Carroceria = TipoCarroceria.Hatch;
 
             _repositorio.Inserir(veiculo);
+
+            Console.WriteLine(veiculo.ToString());
+
         }
+
     }
 }

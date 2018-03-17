@@ -40,4 +40,56 @@
     <Combustivel>Gasolina</Combustivel>
     <Cambio>Manual</Cambio>
   </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>76b955b6-8ad5-495b-ae6b-ad20086b6deb</Id>
+    <Placa>KKK1234</Placa>
+    <Ano>1998</Ano>
+    <Observacao>Sem nenhum defeito</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Alcool</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>7ab1af3e-5a87-4743-b096-1cd7e615be5c</Id>
+    <Placa>EEE2323</Placa>
+    <Ano>1985</Ano>
+    <Observacao>Teste de modelo</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>4</Id>
+      <Nome>Gol</Nome>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Volkswagen</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatico</Cambio>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>62930464-f17d-4ac1-9397-1392bb26e6e3</Id>
+    <Placa>ABC6666</Placa>
+    <Ano>2002</Ano>
+    <Observacao>Roboto</Observacao>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Amarelo</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gnv</Combustivel>
+    <Cambio>Manual</Cambio>
+  </Veiculo>
 </veiculos>
