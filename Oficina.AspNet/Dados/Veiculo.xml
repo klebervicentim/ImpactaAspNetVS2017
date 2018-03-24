@@ -92,4 +92,88 @@
     <Combustivel>Gnv</Combustivel>
     <Cambio>Manual</Cambio>
   </Veiculo>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>cc983b7c-0ae4-4407-be4a-688583f84a84</Id>
+    <Placa>KNV2018</Placa>
+    <Ano>1997</Ano>
+    <Observacao>dsajfklsdajfklsda</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>def9915b-ca98-4233-abb3-c6b7b037e14b</Id>
+    <Placa>AXS2020</Placa>
+    <Ano>1945</Ano>
+    <Observacao>Cadastro com sucesso</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Gasolina</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>5d5c5b6b-8060-45fc-89a8-ce9c7c68c5b3</Id>
+    <Placa>ASS3434</Placa>
+    <Ano>1996</Ano>
+    <Observacao>kdjhflkajfldsjaldf</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Palio</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Alcool</Combustivel>
+    <Cambio>Automatico</Cambio>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>8911d857-a955-41c6-a9bc-4c289fa2476a</Id>
+    <Placa>3489025</Placa>
+    <Ano>2010</Ano>
+    <Observacao>Terceira tentativa de mensagem de sucesso</Observacao>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>4</Id>
+      <Nome>Gol</Nome>
+      <Marca>
+        <Id>3</Id>
+        <Nome>Volkswagen</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatizado</Cambio>
+    <Carroceria>Hatch</Carroceria>
+  </VeiculoPasseio>
 </veiculos>

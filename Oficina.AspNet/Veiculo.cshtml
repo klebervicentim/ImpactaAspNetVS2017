@@ -28,19 +28,37 @@
             margin-bottom: 5px;
         }
 
-            input[type=submit] {
+        input[type=submit] {
                 width: 300px;
             }
+        #mensagemErro {
+               height: 40px;
+               background-color: #dc3545;
+               margin-bottom: 10px;
+               color: #ffffff;
+               vertical-align: middle;
+               line-height: 40px;
+               text-align: center;
+        }
+
     </style>
 </head>
-<body>
+<body onload="exibirMensagem()">
     <h1>CADASTRO DE VEÍCULOS</h1>
     <hr />
     @{ 
-        if (IsPost)
+        try
         {
-            _veiculoAplicacao.Inserir();
-            Response.Redirect("Veiculo"); 
+            if (IsPost)
+            {
+                _veiculoAplicacao.Inserir();
+                Response.Redirect("Veiculo?mensagem=Veiculo cadastrado com sucesso");
+            }
+        }
+        catch
+        {
+            <div id="mensagemErro">@HttpContext.Current.Items["mensagemErro"]</div>
+            
         }
     }
 
@@ -72,21 +90,21 @@
         <select id="cor" name="cor">
             <option value="">Escolha a cor</option>
             @foreach (var cor in _veiculoAplicacao.Cores)
-        {
+            {
             <option value="@cor.Id">@cor.Nome</option>
 
-    }
+            }
         </select>
 
         <br />
 
         <label for="placa">Placa:</label>
-        <input type="text" name="placa" />
+        <input type="text" name="placa" value=@Request.Form["placa"] />
 
         <br />
 
         <label for="ano">Ano:</label>
-        <input type="text" name="ano" />
+        <input type="text" name="ano" value=@Request.Form["ano"] />
 
         <br />
 
@@ -125,6 +143,14 @@
     <script type="text/javascript">
         function obterModelos(marcaId) {
             document.location.href = "Veiculo?marcaId=" + marcaId
+        }
+        function exibirMensagem() {
+            var params = (new URL(document.location)).searchParams;
+            var mensagem = params.get("mensagem");
+            if (mensagem) {
+                alert(mensagem);
+                document.location.href = "Veiculo";
+            }
         }
     </script>
 
