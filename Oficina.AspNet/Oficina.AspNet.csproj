@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A5756EEF-368A-4222-901B-67DC25B90A39}</ProjectGuid>
+    <ProjectGuid>{EF0FF27A-F20C-42D6-9D9B-28B50F957605}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -97,10 +97,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dados\Cor.txt" />
-    <Content Include="Dados\Marca.txt" />
-    <Content Include="Dados\Modelo.xml" />
-    <Content Include="Dados\Veiculo.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +126,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52043</DevelopmentServerPort>
+          <DevelopmentServerPort>51563</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52043/</IISUrl>
+          <IISUrl>http://localhost:51563/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

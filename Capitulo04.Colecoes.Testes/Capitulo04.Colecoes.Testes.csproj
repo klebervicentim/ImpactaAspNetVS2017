@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC8F87F1-9646-47D1-AB50-4EC06C667BB6}</ProjectGuid>
+    <ProjectGuid>{7A89D17E-28F0-4E0B-8F30-9725DD55F40A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Capitulo04.Colecoes.Testes</RootNamespace>
@@ -49,17 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListTeste.cs" />
+    <Compile Include="Veiculo.cs" />
     <Compile Include="VetorTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
-      <Project>{19B91507-6B7E-4AC1-B64C-92B63F013EFC}</Project>
-      <Name>Oficina.Dominio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oficina.Dominio;
 
 namespace Capitulo04.Colecoes.Testes
 {
@@ -10,86 +9,80 @@ namespace Capitulo04.Colecoes.Testes
         [TestMethod]
         public void InicializacaoTeste()
         {
-            //var Strings = new string[10];
-            //Strings[1] = "Nova string 1";
-            //Strings[9] = "String numero 9";
+            var strings = new string[10];
+            strings[0] = "String 1";
+            //strings[10] = "String 10";
 
-            //var veiculos = new VeiculoPasseio[14000];
+            //var veiculos = new Veiculo[1000];
 
-            decimal[] Decimais = { 12.4m, 11.3m, 5 };
+            //var decimais = new decimal[] { 1.7m, 0.3m, 15};
 
-            foreach (var @decimal in Decimais)
+            decimal[] decimais = { 1.7m, 0.3m, 15 };
+
+            foreach (var @decimal in decimais)
             {
                 Console.WriteLine(@decimal);
             }
 
-            Console.WriteLine($"Tamanho do vetor = {Decimais.Length}");
+            Console.WriteLine($"Tamanho do vetor: {decimais.Length}");
         }
 
         [TestMethod]
         public void RedimensionamentoTeste()
         {
-            decimal[] Decimais = { 2.8m, 6.5m, 10 };
-            Array.Resize(ref Decimais, 4);
-            Decimais[3] = 17.8m;
+            decimal[] decimais = { 1.7m, 0.3m, 15 };
+
+            Array.Resize(ref decimais, 4);
+
+            decimais[3] = 17.2m;
         }
 
         [TestMethod]
         public void OrdenacaoTeste()
         {
-            decimal[] Decimais = { 2.8m, 6.5m, 10 };
-            Array.Sort(Decimais);
-            Assert.IsTrue(Decimais[0] == 2.8m);
+            decimal[] decimais = { 1.7m, 0.3m, 15 };
 
-        }
+            Array.Sort(decimais);
 
-        public decimal CalculaMedia(decimal valor1, decimal valor2)
-        {
-            //valor1 = 2.5m;
-            //valor2 = 10.9m;
-
-            return (valor1 + valor2) / 2;
-        }
-        public decimal CalculaMedia(params decimal[] valores)
-        {
-            decimal somaTotal = 0m;
-            foreach (var item in valores)
-            {
-                somaTotal += item;
-            }
-            return somaTotal / valores.Length;
+            Assert.IsTrue(decimais[0] == 0.3m);
         }
 
         [TestMethod]
         public void MediaTeste()
         {
-            decimal[] Decimais = { 2.8m, 6.5m, 10 };
-            Console.WriteLine(CalculaMedia(Decimais));
-            
+            decimal[] decimais = { 1.7m, 0.3m, 15 };
+
+            Console.WriteLine(Media(decimais));
+
+            Console.WriteLine(Media(1.6m, 2.5m, 58, 4.4m));
         }
 
         [TestMethod]
         public void StringsSaoVetoresTeste()
         {
-            var nome = "Vitor";
+            var nome = "Vítor";
 
-            foreach (var caracter in nome)
+            foreach (var caractere in nome)
             {
-                Console.WriteLine(caracter);
+                Console.WriteLine(caractere);
             }
-
         }
 
         private decimal Media(decimal valor1, decimal valor2)
         {
-            return 0;
+            return (valor1 + valor2) / 2;
         }
-        //ToDo: Copiar esse código
 
-        private decimal Media2(params decimal[] valores)
+        private decimal Media(params decimal[] valores)
         {
-            return 0;
+            var soma = 0m;
+
+            foreach (var valor in valores)
+            {
+                soma += valor; 
+            }
+
+            return soma / valores.Length;
         }
-        //ToDo: Copiar esse código
     }
 }

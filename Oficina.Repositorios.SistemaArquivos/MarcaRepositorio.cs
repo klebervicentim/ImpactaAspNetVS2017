@@ -1,8 +1,8 @@
 ﻿using Oficina.Dominio;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Configuration;
+using System.IO;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
@@ -10,7 +10,7 @@ namespace Oficina.Repositorios.SistemaArquivos
     {
         private string _caminhoArquivoMarca = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
 
-        //ToDo: OO - Polimorfismo por sobrecarga
+        //ToDo: OO - polimofirsmo por sobrecarga.
         public List<Marca> Selecionar()
         {
             var marcas = new List<Marca>();
@@ -54,5 +54,10 @@ namespace Oficina.Repositorios.SistemaArquivos
 
             return marca;
         }
+
+        //public Marca Selecionar(string marcaId)
+        //{
+
+        //}
     }
 }

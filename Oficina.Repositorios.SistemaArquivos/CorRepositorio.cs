@@ -8,11 +8,8 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class CorRepositorio
     {
-
         private string _caminhoArquivoCor = ConfigurationManager.AppSettings["caminhoArquivoCor"];
 
-
-        //Trazer todas as cores do objeto Cor
         public List<Cor> Selecionar()
         {
             var cores = new List<Cor>();
@@ -31,7 +28,6 @@ namespace Oficina.Repositorios.SistemaArquivos
             return cores;
         }
 
-        //Trazer uma cor específica 
         public Cor Selecionar(int corId)
         {
             Cor cor = null;
@@ -39,14 +35,16 @@ namespace Oficina.Repositorios.SistemaArquivos
             foreach (var linha in File.ReadAllLines(_caminhoArquivoCor))
             {
                 //00001Preto
-                if (Convert.ToInt32(linha.Substring(0,5)) == corId)
+
+                if (Convert.ToInt32(linha.Substring(0, 5)) == corId)
                 {
                     cor = new Cor();
                     cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                     cor.Nome = linha.Substring(5);
+
                     break;
                 }
-
+              
             }
 
             return cor;

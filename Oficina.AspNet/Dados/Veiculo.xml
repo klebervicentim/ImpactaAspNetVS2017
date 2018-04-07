@@ -2,9 +2,9 @@
 <veiculos>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Id>1</Id>
-    <Placa>BPA5911</Placa>
+    <Placa>ABC1234</Placa>
     <Ano>2014</Ano>
-    <Observacao>Nenhuma Observacao</Observacao>
+    <Observacao>Obs</Observacao>
     <Cor>
       <Id>1</Id>
       <Nome>Preto</Nome>
@@ -22,12 +22,12 @@
   </Veiculo>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Id>2</Id>
-    <Placa>MRV0400</Placa>
-    <Ano>2017</Ano>
-    <Observacao>Segundo carro</Observacao>
+    <Placa>XYZ2222</Placa>
+    <Ano>2014</Ano>
+    <Observacao>Obs</Observacao>
     <Cor>
-      <Id>2</Id>
-      <Nome>Amarelo</Nome>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
     </Cor>
     <Modelo>
       <Id>1</Id>
@@ -35,51 +35,18 @@
       <Marca>
         <Id>1</Id>
         <Nome>Fiat</Nome>
-      </Marca>
-    </Modelo>
-    <Combustivel>Gasolina</Combustivel>
-    <Cambio>Manual</Cambio>
-  </Veiculo>
-  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>76b955b6-8ad5-495b-ae6b-ad20086b6deb</Id>
-    <Placa>KKK1234</Placa>
-    <Ano>1998</Ano>
-    <Observacao>Sem nenhum defeito</Observacao>
-    <Cor>
-      <Id>1</Id>
-      <Nome>Preto</Nome>
-    </Cor>
-    <Combustivel>Alcool</Combustivel>
-    <Cambio>Manual</Cambio>
-  </Veiculo>
-  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>7ab1af3e-5a87-4743-b096-1cd7e615be5c</Id>
-    <Placa>EEE2323</Placa>
-    <Ano>1985</Ano>
-    <Observacao>Teste de modelo</Observacao>
-    <Cor>
-      <Id>1</Id>
-      <Nome>Preto</Nome>
-    </Cor>
-    <Modelo>
-      <Id>4</Id>
-      <Nome>Gol</Nome>
-      <Marca>
-        <Id>3</Id>
-        <Nome>Volkswagen</Nome>
       </Marca>
     </Modelo>
     <Combustivel>Flex</Combustivel>
-    <Cambio>Automatico</Cambio>
+    <Cambio>Manual</Cambio>
   </Veiculo>
   <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>62930464-f17d-4ac1-9397-1392bb26e6e3</Id>
-    <Placa>ABC6666</Placa>
-    <Ano>2002</Ano>
-    <Observacao>Roboto</Observacao>
+    <Id>5ee70be7-308b-466d-99dd-e60af64bfd9e</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2014</Ano>
     <Cor>
-      <Id>2</Id>
-      <Nome>Amarelo</Nome>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
     </Cor>
     <Modelo>
       <Id>1</Id>
@@ -89,14 +56,14 @@
         <Nome>Fiat</Nome>
       </Marca>
     </Modelo>
-    <Combustivel>Gnv</Combustivel>
+    <Combustivel>Gasolina</Combustivel>
     <Cambio>Manual</Cambio>
   </Veiculo>
   <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>cc983b7c-0ae4-4407-be4a-688583f84a84</Id>
-    <Placa>KNV2018</Placa>
-    <Ano>1997</Ano>
-    <Observacao>dsajfklsdajfklsda</Observacao>
+    <Id>82e97852-df9f-4612-8f15-106d3051c4bd</Id>
+    <Placa>ABC9999</Placa>
+    <Ano>2018</Ano>
+    <Observacao>Observação</Observacao>
     <Cor>
       <Id>1</Id>
       <Nome>Preto</Nome>
@@ -114,10 +81,10 @@
     <Carroceria>Hatch</Carroceria>
   </VeiculoPasseio>
   <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>def9915b-ca98-4233-abb3-c6b7b037e14b</Id>
-    <Placa>AXS2020</Placa>
-    <Ano>1945</Ano>
-    <Observacao>Cadastro com sucesso</Observacao>
+    <Id>cd961412-4b0d-42e2-b1cd-fd94a9a49551</Id>
+    <Placa>ABC1234</Placa>
+    <Ano>2018</Ano>
+    <Observacao>asdf</Observacao>
     <Cor>
       <Id>1</Id>
       <Nome>Preto</Nome>
@@ -128,48 +95,6 @@
       <Marca>
         <Id>1</Id>
         <Nome>Fiat</Nome>
-      </Marca>
-    </Modelo>
-    <Combustivel>Gasolina</Combustivel>
-    <Cambio>Manual</Cambio>
-    <Carroceria>Hatch</Carroceria>
-  </VeiculoPasseio>
-  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>5d5c5b6b-8060-45fc-89a8-ce9c7c68c5b3</Id>
-    <Placa>ASS3434</Placa>
-    <Ano>1996</Ano>
-    <Observacao>kdjhflkajfldsjaldf</Observacao>
-    <Cor>
-      <Id>1</Id>
-      <Nome>Preto</Nome>
-    </Cor>
-    <Modelo>
-      <Id>1</Id>
-      <Nome>Palio</Nome>
-      <Marca>
-        <Id>1</Id>
-        <Nome>Fiat</Nome>
-      </Marca>
-    </Modelo>
-    <Combustivel>Alcool</Combustivel>
-    <Cambio>Automatico</Cambio>
-    <Carroceria>Hatch</Carroceria>
-  </VeiculoPasseio>
-  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Id>8911d857-a955-41c6-a9bc-4c289fa2476a</Id>
-    <Placa>3489025</Placa>
-    <Ano>2010</Ano>
-    <Observacao>Terceira tentativa de mensagem de sucesso</Observacao>
-    <Cor>
-      <Id>1</Id>
-      <Nome>Preto</Nome>
-    </Cor>
-    <Modelo>
-      <Id>4</Id>
-      <Nome>Gol</Nome>
-      <Marca>
-        <Id>3</Id>
-        <Nome>Volkswagen</Nome>
       </Marca>
     </Modelo>
     <Combustivel>Flex</Combustivel>

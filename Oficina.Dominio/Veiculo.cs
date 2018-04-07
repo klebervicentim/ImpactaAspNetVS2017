@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Oficina.Dominio
 {
-    //ToDo: OO - Abstração ou Classes
+    //ToDo: OO - abstração ou classe.
     public abstract class Veiculo
     {
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        //ToDo: OO - Encapsular com Get e Set
         private string _placa;
+
+        //ToDo: OO - encapsulamento.
         public string Placa
         {
             get
@@ -24,27 +22,35 @@ namespace Oficina.Dominio
                 _placa = value.ToUpper();
             }
         }
+
         public int Ano { get; set; }
         public string Observacao { get; set; }
+
         public Cor Cor { get; set; }
         public Modelo Modelo { get; set; }
         public Combustivel Combustivel { get; set; }
         public Cambio Cambio { get; set; }
-        
-        protected List<string> ValidaBase()
+        //public string Placa { get => _placa.ToUpper(); set => _placa = value.ToUpper(); }
+
+        protected List<string> ValidarBase()
         {
             var erros = new List<string>();
 
-            if (string.IsNullOrEmpty(Placa))
-                erros.Add("A placa é obrigatória");
+            //if (Placa == string.Empty)
+            if(string.IsNullOrEmpty(Placa))
+            {
+                erros.Add("A Placa é obrigatória.");
+            }
+
             return erros;
         }
+
         public abstract List<string> Validar();
 
-        //ToDo: OO - Poliformismo por substituição (Override no filho, Virtual no pai)
+        //ToDo: OO - polimorfismo por substituição.
         public override string ToString()
         {
-            return $"Modelo: {Modelo.Nome}, Cor: {Cor.Nome}, Placa: {Placa}";
+            return $"{Modelo.Nome} - {Cor.Nome} - {Placa}";
         }
     }
 }

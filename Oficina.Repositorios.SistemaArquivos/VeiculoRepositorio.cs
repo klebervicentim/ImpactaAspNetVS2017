@@ -1,9 +1,10 @@
 using Oficina.Dominio;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using System.Configuration;
-
 
 namespace Oficina.Repositorios.SistemaArquivos
 {

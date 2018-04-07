@@ -1,16 +1,13 @@
 using Oficina.Dominio;
-using Oficina.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using System.Configuration;
-
+using System.Xml.Linq;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
     public class ModeloRepositorio
     {
-
         XDocument _arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
 
         public List<Modelo> SelecionarPorMarca(int marcaId)
@@ -33,7 +30,7 @@ namespace Oficina.Repositorios.SistemaArquivos
             return modelos;
         }
 
-        public Modelo SelecionarPorId (int modeloId)
+        public Modelo Selecionar(int modeloId)
         {
             Modelo modelo = null;
 
@@ -52,7 +49,6 @@ namespace Oficina.Repositorios.SistemaArquivos
             }
 
             return modelo;
-        }
-
+        } 
     }
 }

@@ -1,9 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oficina.Dominio;
 using Oficina.Repositorios.SistemaArquivos;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,31 +11,27 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
     [TestClass()]
     public class MarcaRepositorioTests
     {
-
-        MarcaRepositorio repositorio = new MarcaRepositorio();
-        
+        MarcaRepositorio _repositorio = new MarcaRepositorio();
 
         [TestMethod()]
         public void SelecionarTest()
         {
+            var marcas = _repositorio.Selecionar();
 
-            var marcas = repositorio.Selecionar();
             foreach (var marca in marcas)
             {
-                Console.WriteLine($"{ marca.Id} - { marca.Nome }");
+                Console.WriteLine($"{marca.Id} - {marca.Nome}");
             }
-
         }
 
         [TestMethod()]
         [DataRow(1)]
         [DataRow(-1)]
-        public void SelecionarPorID(int marcaSelecionada)
+        public void SelecionarPorIdTest(int marcaId)
         {
-            var marca = repositorio.Selecionar(marcaSelecionada);
-            var marcas = repositorio.Selecionar();
+            var marca = _repositorio.Selecionar(marcaId);
 
-            if (marcaSelecionada>0)
+            if (marcaId > 0)
             {
                 Assert.IsNotNull(marca);
             }
@@ -45,7 +39,6 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
             {
                 Assert.IsNull(marca);
             }
-
         }
     }
 }

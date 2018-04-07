@@ -4,6 +4,6 @@
     {
         Hatch = 1,
         Sedan = 2,
-        SUV = 3
+        Pickup = 3
     }
 }
