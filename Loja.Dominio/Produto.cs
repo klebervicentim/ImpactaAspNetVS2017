@@ -7,6 +7,6 @@
         public string Nome { get; set; }
         public int Estoque { get; set; }
         public virtual Categoria Categoria { get; set; }
-        public bool Descontinuado { get; set; }
+        public bool Ativo { get; set; }
     }
 }
