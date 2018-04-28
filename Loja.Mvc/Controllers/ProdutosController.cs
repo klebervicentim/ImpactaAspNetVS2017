@@ -72,7 +72,8 @@ namespace Loja.Mvc.Controllers
         // GET: Produtos/Create
         public ActionResult Create()
         {
-            return View(Mapear(new Produto()));
+            ViewBag.Title = "Novo Produto";
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", Mapear(new Produto()));
         }
 
         // POST: Produtos/Create
@@ -91,7 +92,7 @@ namespace Loja.Mvc.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(viewModel);
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", viewModel);
         }
 
         private Produto Mapear(ProdutoViewModel viewModel)
@@ -121,7 +122,7 @@ namespace Loja.Mvc.Controllers
             {
                 return HttpNotFound();
             }
-            return View(Mapear(produto));
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", Mapear(produto));
         }
 
         // POST: Produtos/Edit/5
@@ -141,7 +142,7 @@ namespace Loja.Mvc.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(viewModel);
+            return View("~/Views/Produtos/CreateOrEdit.cshtml", viewModel);
         }
 
         private void Mapear(ProdutoViewModel viewModel, Produto produto)

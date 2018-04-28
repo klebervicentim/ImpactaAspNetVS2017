@@ -13,6 +13,7 @@ namespace Loja.Mvc.Models
 
 
         [Required]
+        [StringLength (200)]
         public string Nome { get; set; }
 
         [Required]

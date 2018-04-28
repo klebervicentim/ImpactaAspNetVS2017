@@ -1,0 +1,17 @@
+﻿@model Loja.Mvc.Models.ProdutoViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@Html.Partial("~/Views/Produtos/_ProdutoForm.cshtml", Model)
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
