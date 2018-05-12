@@ -1,12 +1,13 @@
 ﻿using Loja.Dominio;
 using Loja.Repositorios.SqlServer.EFCodeFirst.Migrations;
 using Loja.Repositorios.SqlServer.EFCodeFirst.ModelConfiguration;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Loja.Repositorios.SqlServer.EFCodeFirst
 {
-    public class LojaDbContext : DbContext
+    public class LojaDbContext : IdentityDbContext
     {
         public LojaDbContext() : base("name=lojaConnectionString")
         {
@@ -17,7 +18,7 @@ namespace Loja.Repositorios.SqlServer.EFCodeFirst
         }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-
+       
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
