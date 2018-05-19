@@ -7,7 +7,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Loja.Repositorios.SqlServer.EFCodeFirst
 {
-    public class LojaDbContext : IdentityDbContext
+    public class LojaDbContext : IdentityDbContext<Usuario>
     {
         public LojaDbContext() : base("name=lojaConnectionString")
         {
@@ -18,7 +18,12 @@ namespace Loja.Repositorios.SqlServer.EFCodeFirst
         }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-       
+
+        public static LojaDbContext Create()
+        {
+            return new LojaDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,6 +33,8 @@ namespace Loja.Repositorios.SqlServer.EFCodeFirst
 
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
         }
+
+        
 
     }
 }

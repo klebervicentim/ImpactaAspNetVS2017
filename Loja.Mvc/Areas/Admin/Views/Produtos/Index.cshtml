@@ -1,8 +1,14 @@
-﻿@model IEnumerable<Loja.Mvc.Areas.Admin.Models.ProdutoViewModel>
+﻿@using System.Security.Claims
+@using Loja.Mvc.Helpers
+@using Loja.Resources
+
+@model IEnumerable<Loja.Mvc.Areas.Admin.Models.ProdutoViewModel>
 
 @{
     ViewBag.Title = "Index";
 }
+
+<h2>@Literal.NomeModuloProdutos</h2>
 
 <h2>Index</h2>
 
@@ -58,7 +64,11 @@
             {
                 @Html.ActionLink("| Edit", "Edit", new { id = item.Id }) 
 
-                @Html.ActionLink("| Delete", "Delete", new { id = item.Id })
+                //if (User.HasClaim(User,"",""))
+                if (User.HasClaim("Produto", "Excluir"))
+                {
+		        @Html.ActionLink("| Delete", "Delete", new { id = item.Id })  
+                }
             }
         </td>
     </tr>

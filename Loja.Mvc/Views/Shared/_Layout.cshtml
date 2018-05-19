@@ -29,9 +29,9 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Produtos", "Index", new { area = "Admin", controller = "Produtos" })</li>
                         </ul>
-                   </li>
-                    
-                    
+                    </li>
+                    @Html.Partial("_CulturaPartial")
+                    @Html.Partial("_LoginPartial")
                 </ul>
             </div>
         </div>

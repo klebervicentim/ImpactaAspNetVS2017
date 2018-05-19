@@ -1,0 +1,34 @@
+﻿
+@using Loja.Mvc.Helpers;
+@{
+    var cultura = new CulturaHelper();
+ }
+
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a href="" data-toggle="dropdown" class="dropdown-toggle">
+        <img src="~/Content/blank.gif" alt="@cultura.NomeNativo" title="@cultura.NomeNativo" class="flag flag-@cultura.Abreviacao" />
+        <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="@Url.Action("DefinirLinguagem","Home", new { area="", lingugem="pt-BR"})">
+                    <img src="~/Content/blank.gif" alt="Brasil" class="flag flag-br" title="Brasil" />
+                    Brasil
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("DefinirLinguagem","Home", new { area="", lingugem="en-US"})">
+                    <img src="~/Content/blank.gif" alt="United States" class="flag flag-us" title="United States" />
+                    United States
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("DefinirLinguagem","Home", new { area="", lingugem="es-ES"})">
+                    <img src="~/Content/blank.gif" alt="España" class="flag flag-es" title="España" />
+                    España
+                </a>
+            </li>
+        </ul>
+    </li>
+   
+</ul>

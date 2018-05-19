@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201804141355116_AlterarProdutoDescontinuadoParaAtivo.Designer.cs">
       <DependentUpon>201804141355116_AlterarProdutoDescontinuadoParaAtivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805191240414_AdicionarAspNetIdentity.cs" />
+    <Compile Include="Migrations\201805191240414_AdicionarAspNetIdentity.Designer.cs">
+      <DependentUpon>201805191240414_AdicionarAspNetIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelConfiguration\CategoriaConfiguration.cs" />
     <Compile Include="LojaDbContext.cs" />
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804141355116_AlterarProdutoDescontinuadoParaAtivo.resx">
       <DependentUpon>201804141355116_AlterarProdutoDescontinuadoParaAtivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805191240414_AdicionarAspNetIdentity.resx">
+      <DependentUpon>201805191240414_AdicionarAspNetIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
